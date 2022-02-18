@@ -9,15 +9,15 @@ ul {
   li {
     display: inline;
     float: right;
-    padding-right: 3px;
     
-  }
+    }
  li a {
     display: block;
-    padding: 8px;
+   
     color: white;
     text-decoration: none;
     background-color: rgb(109, 130, 223);
+    padding-right: 0;
     
   }
   li a:hover {

@@ -24,28 +24,28 @@
            </ul>
                <div class="box">
                    <div class="container">
+                    
+                       
                  
                  <?php
 
                   session_start();
-
+                  
                   $host="localhost";
                   $us="root";
                   $pass="";
                   $con=mysqli_connect("$host","$us",$pass);
                   
                   mysqli_select_db($con,"registrationdata");
-                  $q= "select * from signin";
-                  $result = mysqli_query($con,$q);
-
-
-
-                  $data = mysqli_fetch_assoc($result);
-                  echo "<b> WELCOME   ". $data['username'] . "</b>  <br>";
+                 
+                  echo "<b> WELCOME:   ". $_SESSION['USERNAME'] ." </b>  <br>";
 
                  ?>
                </div>
                </div>
+
+
+     <p>PALAK</p>
         
            
            
