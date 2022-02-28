@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,13 +18,14 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="active.css">
+<link rel="stylesheet" href="active.css">  
 
 </head>
 <body>
     <ul>
         <li style="float: left;"><a href="home.php">Home</a></li>
         <li><a href="logout.php">Logout</a></li>
+        <li> <a href="edit.php">Edit <span class="glyphicon glyphicon-edit"></span></a></li>
        
       </ul>
       <div class="box">
@@ -40,7 +42,7 @@
           </div>
        
       <?php
-      session_start();
+     session_start();
 
         $host="localhost";
         $us="root";
@@ -56,7 +58,7 @@ die("connection not successful");
 
 }
 mysqli_select_db($con,"registrationdata");
-$q= "select * from signin where isonline='yes'";
+$q= "select * from userdata where isonline='yes'";
 $result = mysqli_query($con,$q);
 $num=mysqli_num_rows($result);
 while($num>0)

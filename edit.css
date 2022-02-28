@@ -1,0 +1,55 @@
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(15, 10, 10, 0.733);
+   
+  }
+  li {
+    display: inline;
+    float: right;
+    
+    
+  }
+  li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(109, 130, 223);
+   }
+   
+  li a:hover {
+    background-color: #111;
+  }
+  .message{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+  }
+  
+  .name{
+    padding: 10px;
+  }
+  body{
+    background-color: rgb(175, 195, 252);
+    
+  }
+  .name{
+    font-size: 20px;
+    padding: 20px;
+  }
+  .pass{
+    font-size: 20px;
+    padding: 20px;
+  }
+  .form-control
+  {
+    border: rgb(89, 89, 248) solid 3px;
+  }

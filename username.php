@@ -15,34 +15,35 @@ die("connection not successful <br>");
 
 }
 mysqli_select_db($con,"registrationdata");
-$uname=$_POST["username"];
+$oname=$_POST["oldname"];
+$nname=$_POST["newname"];
 
-$pass=$_POST["password"];
 
 
-$q="select * from userdata where username='$uname'  && password = '$pass' ";
+$q="select * from userdata where username='$oname'and isonline = 'yes' ";
 $result = mysqli_query($con,$q);
 $num=mysqli_num_rows($result);
-if($num>=1)
+if($num>0)
 {   
     
     
         $qx = "UPDATE userdata
-        SET isonline = 'yes'
-        WHERE username = '$uname'";
+        SET username = '$nname'
+        WHERE username = '$oname' ";
 
         mysqli_query($con,$qx);
         
     
-   $_SESSION['USERNAME'] = $uname;
+   $_SESSION['USERNAME'] = $nname;
     header('location: home.php');
 }
 else
 {
     echo ("<script LANGUAGE='JavaScript'>
-    window. alert('enter correct details');
-    window. location. href='http://localhost/tictactoe-php/login.php';
+    window. alert('enter correct details/Please login to continue');
+    window. location. href='http://localhost/tictactoe-php/edit.php';
     </script>");
+    
 }
 
 

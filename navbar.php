@@ -17,7 +17,10 @@
 
 </head>
 <body>
-    <div class="one">div1</div>
-    <div class="two">Div2</div>
+    <?php
+    $t = date('h');
+    echo $t;
+    ?>
+    
 </body>
 </html>

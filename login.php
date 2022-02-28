@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(empty($_SESSION))
+{}
+else 
+{
+    header ('location:home.php');
+}
+?>
 <html>
     <head>
         <title>Login</title>
@@ -16,7 +25,7 @@
     <body>
         <ul>
             <li style="float: left;"><a href="#">Dashboard</a></li>
-            <li style="padding-right: 3px;"><a href="Register.html">Register</a></li>
+            <li style="padding-right: 3px;"><a href="Register.php">Register</a></li>
             
           </ul>
 

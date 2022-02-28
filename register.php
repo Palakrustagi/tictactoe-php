@@ -1,3 +1,12 @@
+<?php
+session_start();
+if(empty($_SESSION))
+{}
+else 
+{
+    header ('location:home.php');
+}
+?>
 <html>
     <head>
         <title>Register</title>
@@ -16,7 +25,7 @@
     <body>
         <ul>
             <li style="float: left;"><a href="#">Dashboard</a></li>
-            <li><a href="#">Login</a></li>
+            <li><a href="login.php">Login</a></li>
             
           </ul>
         
@@ -29,7 +38,7 @@
                     <div class="row">
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6 colm">
-                  <b>Username:</b>   <input type="text" class="form-control" placeholder="enter username *" name="username"  required />  
+                  <b>Username:</b>   <input type="text" class="form-control" placeholder="enter username *" name="username"  required minlength="6" maxlength="15"/>  
                 </div>
                 </div>
                 </div>
@@ -37,7 +46,7 @@
                 <div class="row">
                     <div class="col-lg-3"></div>
                     <div class="col-lg-6 colm">
-                    <b>Email:</b> <input type="Email" class="form-control" placeholder="enter Email *" name="email"  required />  
+                    <b>Email:</b> <input type="Email" class="form-control" placeholder="enter Email *" name="email"  maxlength="20" required />  
                 </div>
                 </div>
                 </div>    
@@ -45,7 +54,7 @@
                     <div class="row">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-6 ">
-                       <b>Password: </b> <input type="password" class="form-control" placeholder="Your password *" name="password" required />  
+                       <b>Password: </b> <input type="password" class="form-control" placeholder="Your password *" name="password" minlength="7" maxlength="12" required />  
                     </div>
                     </div>
                     </div> 
@@ -53,7 +62,7 @@
                     <div class="row">
                         <div class="col-lg-3"></div>
                         <div class="col-lg-6 ">
-                       <b> Mobile:</b> <input type="number" class="form-control" placeholder="enter contact *" name="mobile"  required />  
+                       <b> Mobile:</b> <input type="number" class="form-control" placeholder="enter contact *" name="mobile" min="10" max="10"  required />  
                     </div>
                     </div>
                     </div>  
@@ -70,6 +79,6 @@
                 </div>
             </form>
                 </div>
-                <h4 style="padding-top: 15px;">Already have an account? <a href="#">click here</a></h4>
+                <h4 style="padding-top: 15px;">Already have an account? <a href="login.php">click here</a></h4>
             </body>
 </html>

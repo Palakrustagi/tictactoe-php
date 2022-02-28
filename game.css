@@ -1,0 +1,77 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(15, 10, 10, 0.733);
+   
+  }
+  li {
+    display: inline;
+    float: right;
+    
+    
+  }
+  li a {
+    display: block;
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(109, 130, 223);
+   }
+   
+  li a:hover {
+    background-color: #111;
+  }
+  
+  
+  
+  body{
+    background-color: rgb(210, 221, 252);
+  }
+  .container{
+    min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }  
+  .gameboard{
+      width: 300px;
+      height: 300px;
+     
+    
+  }
+  
+ .score{
+   font-size: 30px;
+   color: blue;
+ }
+  .butn{
+    
+  padding: 40px;
+  }
+  .row{
+      height: 32%;
+      
+  }
+  .message{
+      font-size: 30px;
+      color: blue;
+      text-align:center;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  .col{
+      height: 100%;
+      width: 32%;
+      border: 2px solid black;
+      float: left;
+      text-align: center;
+      font-weight: bolder;
+      color: rgb(21, 5, 253);
+      cursor: pointer;
+      font-size:60px;
+      text-align: center;
+  }
+  .box{
+    text-align: center;
+  }

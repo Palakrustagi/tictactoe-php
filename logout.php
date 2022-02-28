@@ -19,11 +19,12 @@ die("connection not successful <br>");
 
 mysqli_select_db($con,"registrationdata");
 
-$q = "UPDATE signin
+$q = "UPDATE userdata           
         SET isonline = 'no'
         WHERE username = '$user'";
 
 mysqli_query($con,$q);
+
 unset($_SESSION["USERNAME"]);
 
 header("Location:login.php");

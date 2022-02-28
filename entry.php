@@ -20,19 +20,27 @@ $email=$_POST['email'];
 $pass=$_POST['password'];
 $mobile=$_POST['mobile'];
 $gender=$_POST['gender'];
-$q="select * from signin where username='$uname' && email='$email' && password = '$pass' && mobile = '$mobile' && gender = '$gender'";
+$q="select * from userdata where username='$uname' && email='$email' && password = '$pass' && mobile = '$mobile' && gender = '$gender'";
 $result = mysqli_query($con,$q);
 $num=mysqli_num_rows($result);
 if($num==1)
 {
-    echo " account already exists";
+    
+    echo ("<script LANGUAGE='JavaScript'>
+    window. alert('Account already exists! Try again!');
+    window. location. href='http://localhost/tictactoe-php/register.php';
+    </script>");
+    
 }
 else
 {
-    $qx= "insert into signin (username , email , password , mobile , gender) values ('$uname' , '$email', '$pass' , '$mobile' , '$gender')";
+    $qx= "insert into userdata (username , email , password , mobile , gender) values ('$uname' , '$email', '$pass' , '$mobile' , '$gender')";
     mysqli_query($con , $qx);
-    header('location: login.php');
+    echo ("<script LANGUAGE='JavaScript'>
+    window. alert('Registration successful. LOGIN NOW!');
+    window. location. href='http://localhost/tictactoe-php/login.php';
+    </script>");
+
+
 }
-
-
 ?>

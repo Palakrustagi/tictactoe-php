@@ -31,20 +31,15 @@ body{
   
 }
 .box{
-  border: rgb(5, 126, 247) solid 5px;
+  border: rgb(119, 119, 250) solid 2px;
   text-align: center;
   
 }
 
+
+
+
 .container{
-text-align: center;
-
-}
-
-.playnow{
-  text-align: center;
-}
-.game{
   min-height: 100vh;
     display: flex;
     justify-content: center;
