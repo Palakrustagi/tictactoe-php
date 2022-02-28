@@ -40,7 +40,9 @@
                //value -1 means that , that cell has not been clicked yet.
                function playeraction(elem,row,col)
                
-               {   if (elem.innerHTML != "") return;
+               {  
+                
+                 if (elem.innerHTML != "") return;
                    if (win != -1) return;
                     
                 matrix[row][col]=turn;
@@ -69,17 +71,18 @@
                     if(win !=-1)
                      {
                         document.getElementById("message").innerHTML = "Player " + win + " has won the game!";
-                        if(win=1)
+                     
+                        if(win==1)
                         {
-                            document.getElementById("one").innerHTML = " " + win + "";
+                            document.getElementById("one").innerHTML = " " + 1 + "";
                             document.getElementById("two").innerHTML = " " + 0 + "";
                         }
-                        else if (win=2){
-                            document.getElementById("two").innerHTML = " " + win + "";
+                        else if (win==2){
+                            document.getElementById("two").innerHTML = " " + 1 + "";
                             document.getElementById("one").innerHTML = " " + 0 + "";
                         }
+                     
                      }
-                  
                }
             
               
