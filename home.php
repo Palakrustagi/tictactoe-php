@@ -47,22 +47,8 @@ else
                 </div>
                 </div>
           
-              
-           
-           
-                
-              
-           
               </div>
 
-           
-           
-
-          
-           
-           
-            
-            
         
     </body>
 </html>

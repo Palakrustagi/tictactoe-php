@@ -8,12 +8,11 @@ $con=mysqli_connect("$host","$us",$pass);
 if($con)
 {
     echo"database connection successful";
-    
+   
 }
-else
+else    
 {
 die(" database connection not successful <br>");
-
 }
 mysqli_select_db($con,"registrationdata");
 $opass=$_POST["oldpass"];
@@ -38,13 +37,14 @@ if($num>0)
     header('location: home.php');
 }
 else
-{ 
+{   
     echo ("<script LANGUAGE='JavaScript'>
 window. alert('enter correct details/please login to continue');
 window. location. href='http://localhost/tictactoe-php/edit.php';
 </script>");
-    
+                                     
 }
 
 
+}
 ?>

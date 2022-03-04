@@ -43,7 +43,7 @@ else
                 </div>
                   
                     <div class="col-sm-4">
-                  
+
                    <input type="text" class="form-control"  placeholder="enter new username*"  minlength="6" maxlength="15" name="newname" required />  
                     </div>
                     <div class="col-sm-4">
@@ -51,20 +51,19 @@ else
                 </div>
                </div>
            </form>
-           <form action="password.php" method="post">
+           <form action="password.php" method="post">   
                <div class="pass"><b><u>Password:</u></b></div> 
                 <div class="row">
                    <div class="col-sm-4">
-               
-                  
+ 
                    <input type="password" class="form-control" placeholder="enter old passsword*" name="oldpass" required />  
-                
+                      
                    </div>
                     <div class="col-sm-4">
-                   
+            
                    <input type="password" class="form-control" placeholder="enter new password*" minlength="7" maxlength="12" name="newpass" required/>  
                 
-                </div>
+                 </div>
                 <div class="col-sm-4">
                 <button class="btn btn-primary" type="submit">Change Password</button>
                 </div>
