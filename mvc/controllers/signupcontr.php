@@ -1,5 +1,6 @@
 <?php
-class signupcontroller extends signupmodel{
+include './../models/signupuser.php';
+class signupcontr extends signupuser{
     private $name;
     private $email;
     private $pass;
@@ -14,16 +15,16 @@ class signupcontroller extends signupmodel{
     {
       if($this->usermtch()==false)
       {
-        header("location:signinnview.php?error=accountalreadyexistst");
+        header("location:./../views/signin.php?error=accountalreadyexistst");
       exit();
       }
     $this->setuser($this->name,$this->email,$this->pass);
     }
 
 
-  protected function usermtch()
+  public function usermtch()
   {
-    $result;
+    $result = null;
     if(!$this->checkuser($this->email,$this->pass))
     {
       $result = false;

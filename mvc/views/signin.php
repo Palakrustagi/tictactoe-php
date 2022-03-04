@@ -1,12 +1,4 @@
-<?php
-session_start();
-if(empty($_SESSION))
-{}
-else 
-{
-    header ('location:home.php');
-}
-?>
+
 <html>
     <head>
         <title>Register</title>
@@ -33,7 +25,7 @@ else
             <h1>
                <b>REGISTER</b> 
             </h1>
-            <form action="signupinc.php" method="post">
+            <form action="./../includes/signupinc.php" method="post">
                 <div class="form-group">  
                     <div class="row">
                     <div class="col-lg-3"></div>
