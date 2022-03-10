@@ -18,6 +18,7 @@ class signupcontr extends signupuser{
         header("location:./../views/signin.php?error=accountalreadyexistst");
       exit();
       }
+      else 
     $this->setuser($this->name,$this->email,$this->pass);
     }
 

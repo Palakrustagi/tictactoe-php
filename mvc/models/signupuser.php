@@ -5,19 +5,27 @@ class signupuser extends dbclass{
     protected function setuser($name,$email,$pass)
     {
         
-        $stmt = $this-> connect()-> prepare('insert into mvcsignin(name, email, password) values (?,?,?)');
+        try{
+
+            $connection=$this-> connect();
+            $connection->beginTransaction();
+             $stmt = $connection-> prepare('insert into mvcsignin(name, email, password) values (?,?,?)');
+                
+                if(!$stmt->execute(array($name , $email,$pass)))
+                
+                {
+                    $stmt = null;
+                    header("location:./../views/signin.php?error=stmtfailed");
+                    exit();
+                }
         
-        if(!$stmt->execute(array($name , $email,$pass)))
-        
-        {
-            $stmt = null;
-            header("location:./../views/signin.php?error=stmtfailed");
-            exit();
+                   $temp=$connection->commit();
+                    
         }
-        else{
-            echo"worked";
+        catch(Exception $e){
+            $connection->rollBack();
+            echo "Failed : ".$e->getMessage();
         }
-        $stmt = null;
     }
 
     protected function checkuser($email,$pass)
